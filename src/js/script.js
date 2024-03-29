@@ -16,6 +16,7 @@ class ValidandoCpf {
     const camposValidos = this.camposSaoValidos();
     const senhasValidas = this.senhasSaoValidas();
 
+    console.log(camposValidos, senhasValidas);
     if (camposValidos && senhasValidas) {
       alert("Deu bom...");
       // this.formulario.submit();
@@ -35,12 +36,12 @@ class ValidandoCpf {
       if (!campo.value) {
         valid = false;
         this.criaErro(campo, `O campo "${label}" está vazio.`);
-      } else if (campo.classList.contains("nome") || campo.classList.contains("sobrenome")) {
-        valid = this.validaNomeSobrenome(campo, label);
+      } if (campo.classList.contains("nome") || campo.classList.contains("sobrenome")) {
+        if (!this.validaNomeSobrenome(campo, label)) valid = false;
       } else if (campo.classList.contains("cpf")) {
-        valid = this.validaCpf(campo);
+        if (!this.validaCpf(campo)) valid = false;
       } else if (campo.classList.contains("email")) {
-        valid = this.validaEmail(campo);
+        if (!this.validaEmail(campo)) valid = false;
       }
     }
 
