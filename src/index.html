@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gradient-to-tl from-slate-800 to-emerald-600 h-screen flex justify-center items-center">
+
+  <div class="bg-white p-8 rounded-lg shadow-lg">
+
+    <div class="mb-8">
+      <h1 class="text-4xl font-semibold mb-1">Cadastro</h1>
+      <h2 class="text-xl font-medium text-slate-700">Vamos criar a sua conta.</h2>
+    </div>
+
+    <nav class="grid grid-cols-3 gap-1 text-center text-gray-900 text-lg mb-12">
+      <a href="#" class="bg-slate-200 px-10 py-4 font-bold text-green-600 border-b-4 border-emerald-500 rounded-md">CONTA</a>
+      <a href="#" class="bg-slate-100 px-10 py-4 font-bold text-green-500 border-b-4 border-emerald-400 rounded-md">DADOS PESSOAIS</a>
+      <a href="#" class="bg-slate-100 px-10 py-4 font-bold text-green-500 border-b-4 border-emerald-400 rounded-md">PAGAMENTO</a>
+    </nav>
+
+    <form action="/" class="formulario">
+      <p class="text-xl text-slate-500 mb-4">Digite seus detalhes abaixo:</p>
+
+      <ul class="grid grid-cols-2 gap-4 gap-x-8 text-xl mb-12">
+        <li>
+          <label>Nome</label>
+          <input type="text" class="nome validar w-full px-4 py-2 rounded border-b-4 border-zinc-600 bg-slate-100 focus-within:outline-zinc-600">
+        </li>
+
+        <li>
+          <label>Sobrenome</label>
+          <input type="text" class="sobrenome validar w-full px-4 py-2 rounded border-b-4 border-zinc-600 bg-slate-100 focus-within:outline-zinc-600">
+        </li>
+
+        <li>
+          <label>CPF</label>
+          <input type="text" class="cpf validar w-full px-4 py-2 rounded border-b-4 border-zinc-600 bg-slate-100 focus-within:outline-zinc-600">
+        </li>
+
+        <li>
+          <label>E-mail</label>
+          <input type="email" class="email validar w-full px-4 py-2 rounded border-b-4 border-zinc-600 bg-slate-100 focus-within:outline-zinc-600">
+        </li>
+
+        <li>
+          <label>Senha</label>
+          <input type="password" class="senha validar w-full px-4 py-2 rounded border-b-4 border-zinc-600 bg-slate-100 focus-within:outline-zinc-600">
+        </li>
+
+        <li>
+          <label>Confirmar senha</label>
+          <input type="password" class="repetir-senha validar w-full px-4 py-2 rounded border-b-4 border-zinc-600 bg-slate-100 focus-within:outline-zinc-600">
+        </li>
+      </ul>
+
+      <button type="submit" class="w-full bg-gradient-to-tr from-cyan-600 to-green-400 shadow-md p-4 text-xl text-white font-medium rounded-md hover:text-slate-100">Próximo passo</button>
+    </form>
+
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
